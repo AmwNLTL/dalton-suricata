@@ -84,21 +84,21 @@ services:
     restart: always
 
 # Suricata 5.0.6 from source, with Rust support
-  agent-suricata-5.0.7:
-    build:
-      context: ./dalton-agent
-      dockerfile: Dockerfiles/Dockerfile_suricata
-      args:
-        - SURI_VERSION=5.0.7
-        - ENABLE_RUST=--enable-rust
-        - http_proxy=${http_proxy}
-        - https_proxy=${https_proxy}
-        - no_proxy=${no_proxy}
-    image: suricata-5.0.7:latest
-    container_name: suricata-5.0.7
-    environment:
-      - AGENT_DEBUG=${AGENT_DEBUG}
-    restart: always
+#  agent-suricata-5.0.7:
+#    build:
+#      context: ./dalton-agent
+#      dockerfile: Dockerfiles/Dockerfile_suricata
+#      args:
+#        - SURI_VERSION=5.0.7
+#        - ENABLE_RUST=--enable-rust
+#        - http_proxy=${http_proxy}
+#        - https_proxy=${https_proxy}
+#        - no_proxy=${no_proxy}
+#    image: suricata-5.0.7:latest
+#    container_name: suricata-5.0.7
+#    environment:
+#      - AGENT_DEBUG=${AGENT_DEBUG}
+#    restart: always
 
 # Suricata 4.1.10 from source, with Rust support
 #  agent-suricata-4.1.10:
@@ -243,40 +243,40 @@ services:
 #
 
 # Snort 2.9.18 from source
-  agent-snort-2.9.18.1:
-    build:
-      context: ./dalton-agent
-      dockerfile: Dockerfiles/Dockerfile_snort
-      args:
-        - SNORT_VERSION=2.9.18.1
-        - DAQ_VERSION=2.0.7
-        - http_proxy=${http_proxy}
-        - https_proxy=${https_proxy}
-        - no_proxy=${no_proxy}
-    image: snort-2.9.18.1:latest
-    container_name: snort-2.9.18.1
-    environment:
-      - AGENT_DEBUG=${AGENT_DEBUG}
-    restart: always
+#  agent-snort-2.9.18.1:
+#    build:
+#      context: ./dalton-agent
+#      dockerfile: Dockerfiles/Dockerfile_snort
+#      args:
+#        - SNORT_VERSION=2.9.18.1
+#        - DAQ_VERSION=2.0.7
+#        - http_proxy=${http_proxy}
+#        - https_proxy=${https_proxy}
+#        - no_proxy=${no_proxy}
+#    image: snort-2.9.18.1:latest
+#    container_name: snort-2.9.18.1
+#    environment:
+#      - AGENT_DEBUG=${AGENT_DEBUG}
+#    restart: always
 
 # NOTE: Snort 2.9.16 is when DAQ version went to 2.0.7 (from 2.0.6).
 
 # Snort 2.9.15.1 from source
-  agent-snort-2.9.15.1:
-    build:
-      context: ./dalton-agent
-      dockerfile: Dockerfiles/Dockerfile_snort
-      args:
-        - SNORT_VERSION=2.9.15.1
-        - DAQ_VERSION=2.0.6
-        - http_proxy=${http_proxy}
-        - https_proxy=${https_proxy}
-        - no_proxy=${no_proxy}
-    image: snort-2.9.15.1:latest
-    container_name: snort-2.9.15.1
-    environment:
-      - AGENT_DEBUG=${AGENT_DEBUG}
-    restart: always
+#  agent-snort-2.9.15.1:
+#    build:
+#      context: ./dalton-agent
+#      dockerfile: Dockerfiles/Dockerfile_snort
+#      args:
+#        - SNORT_VERSION=2.9.15.1
+#        - DAQ_VERSION=2.0.6
+#        - http_proxy=${http_proxy}
+#        - https_proxy=${https_proxy}
+#        - no_proxy=${no_proxy}
+#    image: snort-2.9.15.1:latest
+#    container_name: snort-2.9.15.1
+#    environment:
+#      - AGENT_DEBUG=${AGENT_DEBUG}
+#    restart: always
 
 # Snort 2.9.14.1 from source
 #  agent-snort-2.9.14.1:
@@ -385,15 +385,15 @@ services:
 ###########################
 
 # Zeek current (latest) from source
-  agent-zeek-current:
-    build:
-      context: ./dalton-agent
-      dockerfile: Dockerfiles/Dockerfile_zeek
-      args:
-        - ZEEK_VERSION=4.0.2
-    image: zeek-current:latest
-    container_name: zeek-current
-    volumes:
-      - ./rulesets/zeek:/opt/dalton-agent/zeek_scripts:ro
-    restart: always
+#  agent-zeek-current:
+#    build:
+#      context: ./dalton-agent
+#      dockerfile: Dockerfiles/Dockerfile_zeek
+#      args:
+#        - ZEEK_VERSION=4.0.2
+#    image: zeek-current:latest
+#    container_name: zeek-current
+#    volumes:
+#      - ./rulesets/zeek:/opt/dalton-agent/zeek_scripts:ro
+#    restart: always
 
